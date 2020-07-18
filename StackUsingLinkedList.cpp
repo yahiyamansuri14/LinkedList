@@ -38,6 +38,22 @@
     else
         return -1;
  }
+
+ int stackTop(){
+    if(top)
+        return top->next;
+    return -1;
+
+ }
+ int isEmpty(){
+    return top?0:1;
+ }
+ int isFull(){
+    Node *temp=new Node;
+    int r=temp?1:0;
+    free(temp);
+    return r;
+ }
  int main(){
     push(10);
     push(11);
